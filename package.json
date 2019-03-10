@@ -6,8 +6,7 @@
   "author": "vilicvane",
   "license": "MIT",
   "scripts": {
-    "build:library": "tsc --project src/library",
-    "build": "yarn build:library",
+    "build": "yarn tsc --build",
     "lint:library": "tslint --project src/library",
     "lint:test": "tslint --project test",
     "lint-prettier": "prettier --check \"**/*.{ts,tsx,js,jsx,json,yml,md}\"",
