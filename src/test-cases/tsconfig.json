@@ -4,8 +4,8 @@
     "composite": true,
 
     "types": ["node"],
-    "declaration": true,
 
-    "outDir": "../../bld/library"
-  }
+    "outDir": "../../bld/test-cases"
+  },
+  "references": [{"path": "../library"}]
 }

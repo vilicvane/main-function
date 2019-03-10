@@ -1,0 +1,8 @@
+{
+  "references": [
+    {"path": "src/library"},
+    {"path": "src/test-cases"},
+    {"path": "test"}
+  ],
+  "files": []
+}

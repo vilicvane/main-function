@@ -9,8 +9,10 @@
     "build:library": "tsc --project src/library",
     "build": "yarn build:library",
     "lint:library": "tslint --project src/library",
+    "lint:test": "tslint --project test",
     "lint-prettier": "prettier --check \"**/*.{ts,tsx,js,jsx,json,yml,md}\"",
-    "lint": "yarn lint-prettier && yarn lint:library"
+    "lint": "yarn lint-prettier && yarn lint:library && yarn lint:test",
+    "test": "jest"
   },
   "main": "bld/library/index.js",
   "types": "bld/library/index.d.ts",
@@ -23,8 +25,11 @@
   },
   "devDependencies": {
     "@magicspace/configs": "^0.1.47",
+    "@types/jest": "^24.0.11",
     "@types/node": "^11.11.0",
+    "jest": "^24.3.1",
     "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
     "tslib": "^1.9.3",
     "tslint": "^5.13.1",
     "tslint-language-service": "^0.9.9",
