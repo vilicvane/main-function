@@ -4,7 +4,9 @@
     "composite": true,
 
     "types": ["node"],
+    "noEmitHelpers": false,
     "declaration": true,
+    "declarationMap": true,
 
     "outDir": "../../bld/library"
   }

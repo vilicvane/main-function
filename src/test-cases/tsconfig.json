@@ -4,6 +4,7 @@
     "composite": true,
 
     "types": ["node"],
+    "noEmitHelpers": false,
 
     "outDir": "../../bld/test-cases"
   },
