@@ -31,6 +31,5 @@ export function main(program: Program): void {
           process.exit(1);
         }
       },
-    )
-    .catch();
+    );
 }
