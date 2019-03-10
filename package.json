@@ -1,0 +1,33 @@
+{
+  "name": "main-function",
+  "version": "0.1.0",
+  "description": "A simple wrapper that handles error and return code.",
+  "repository": "https://github.com/vilic/main-function.git",
+  "author": "vilicvane",
+  "license": "MIT",
+  "scripts": {
+    "build:library": "tsc --project src/library",
+    "build": "yarn build:library",
+    "lint:library": "tslint --project src/library",
+    "lint-prettier": "prettier --check \"**/*.{ts,tsx,js,jsx,json,yml,md}\"",
+    "lint": "yarn lint-prettier && yarn lint:library"
+  },
+  "main": "bld/library/index.js",
+  "types": "bld/library/index.d.ts",
+  "files": [
+    "src/library/**/*.ts",
+    "bld/library"
+  ],
+  "dependencies": {
+    "extendable-error": "^0.1.5"
+  },
+  "devDependencies": {
+    "@magicspace/configs": "^0.1.47",
+    "@types/node": "^11.11.0",
+    "prettier": "^1.16.4",
+    "tslib": "^1.9.3",
+    "tslint": "^5.13.1",
+    "tslint-language-service": "^0.9.9",
+    "typescript": "^3.3.3333"
+  }
+}
