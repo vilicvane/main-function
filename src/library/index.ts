@@ -4,3 +4,4 @@ export default main;
 
 export * from './main';
 export * from './program-error';
+export * from './miscellaneous';
