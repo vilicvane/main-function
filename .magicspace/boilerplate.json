@@ -1,0 +1,21 @@
+{
+  "extends": "@mufan/code-boilerplates/typescript",
+  "options": {
+    "name": "main-function",
+    "license": "MIT",
+    "author": "vilicvane",
+    "tsProjects": [
+      {
+        "name": "library"
+      },
+      {
+        "name": "test-cases",
+        "references": ["library"]
+      },
+      {
+        "name": "test",
+        "references": ["test-cases"]
+      }
+    ]
+  }
+}

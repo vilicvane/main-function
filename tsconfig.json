@@ -1,8 +1,14 @@
 {
   "references": [
-    {"path": "src/library"},
-    {"path": "src/test-cases"},
-    {"path": "test"}
+    {
+      "path": "src/library"
+    },
+    {
+      "path": "src/test-cases"
+    },
+    {
+      "path": "src/test"
+    }
   ],
   "files": []
 }

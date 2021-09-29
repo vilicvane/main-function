@@ -1,12 +1,13 @@
 {
-  "extends": "@magicspace/configs/tsconfig.json",
+  "extends": "@mufan/code/tsconfig.json",
   "compilerOptions": {
     "composite": true,
-
     "types": ["node", "jest"],
-    "importHelpers": false,
-
-    "noEmit": true
+    "outDir": "../../bld/test"
   },
-  "references": [{"path": "../src/library"}, {"path": "../src/test-cases"}]
+  "references": [
+    {
+      "path": "../test-cases"
+    }
+  ]
 }

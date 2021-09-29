@@ -1,7 +1,7 @@
 import * as ChildProcess from 'child_process';
 import * as Path from 'path';
 
-const TEST_CASES_DIR_NAME = Path.join(__dirname, '../bld/test-cases');
+const TEST_CASES_DIR_NAME = Path.join(__dirname, '../../bld/test-cases');
 
 test('should a program receive args', () => {
   let result = ChildProcess.spawnSync(
@@ -159,7 +159,7 @@ Object {
 interface SpawnResult {
   stdout: string;
   stderr: string;
-  code: number;
+  code: number | null;
 }
 
 function extractSpawnResult({

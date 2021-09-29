@@ -3,11 +3,18 @@
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true
+    "source.fixAll.eslint": true
   },
-  "editor.codeActionsOnSaveTimeout": 10000,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [80],
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
 }
