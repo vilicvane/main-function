@@ -1,1 +1,1 @@
-export const NEVER = new Promise<never>(() => {});
+export const BACKGROUND = new Promise<never>(() => {});
