@@ -1,6 +1,6 @@
 {
   "name": "main-function",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A simple wrapper that handles error and return code.",
   "repository": "https://github.com/vilic/main-function.git",
   "license": "MIT",
