@@ -5,7 +5,7 @@ export type Program = (
 ) => Promise<void | number> | void | number;
 
 export function main(program: Program): void {
-  let [, , ...args] = process.argv;
+  const [, , ...args] = process.argv;
 
   Promise.resolve()
     .then(() => program(args))
@@ -19,7 +19,7 @@ export function main(program: Program): void {
       },
       error => {
         if (error instanceof ProgramError) {
-          let message = error.message;
+          const message = error.message;
 
           if (message) {
             console.error(message);

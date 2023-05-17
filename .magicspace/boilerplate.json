@@ -1,10 +1,10 @@
 {
-  "extends": "@mufan/code-boilerplates/typescript",
+  "boilerplate": "@mufan/code-boilerplates/typescript",
   "options": {
     "name": "main-function",
     "license": "MIT",
     "author": "vilicvane",
-    "tsProjects": [
+    "projects": [
       {
         "name": "library"
       },

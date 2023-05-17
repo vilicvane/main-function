@@ -4,156 +4,156 @@ import * as Path from 'path';
 const TEST_CASES_DIR_NAME = Path.join(__dirname, '../../bld/test-cases');
 
 test('should a program receive args', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'args-1'), 'hello', 'world'],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 0,
-  "stderr": "",
-  "stdout": "[ 'hello', 'world' ]
-",
-}
-`);
+    {
+      "code": 0,
+      "stderr": "",
+      "stdout": "[ 'hello', 'world' ]
+    ",
+    }
+  `);
 });
 
 test('should a synchronous program function exit with implicit code 0', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'sync-okay-implicit-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 0,
-  "stderr": "",
-  "stdout": "hello, world!
-",
-}
-`);
+    {
+      "code": 0,
+      "stderr": "",
+      "stdout": "hello, world!
+    ",
+    }
+  `);
 });
 
 test('should a synchronous program function exit with explicit code 0', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'sync-okay-explicit-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 0,
-  "stderr": "",
-  "stdout": "hello, world!
-",
-}
-`);
+    {
+      "code": 0,
+      "stderr": "",
+      "stdout": "hello, world!
+    ",
+    }
+  `);
 });
 
 test('should an asynchronous program function exit with implicit code 0', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'async-okay-implicit-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 0,
-  "stderr": "",
-  "stdout": "hello, world!
-",
-}
-`);
+    {
+      "code": 0,
+      "stderr": "",
+      "stdout": "hello, world!
+    ",
+    }
+  `);
 });
 
 test('should an asynchronous program function exit with explicit code 0', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'async-okay-explicit-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 0,
-  "stderr": "",
-  "stdout": "hello, world!
-",
-}
-`);
+    {
+      "code": 0,
+      "stderr": "",
+      "stdout": "hello, world!
+    ",
+    }
+  `);
 });
 
 test('should a synchronous program function exit with code of `ProgramError`', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'sync-program-error-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 123,
-  "stderr": "hello, program error!
-",
-  "stdout": "",
-}
-`);
+    {
+      "code": 123,
+      "stderr": "hello, program error!
+    ",
+      "stdout": "",
+    }
+  `);
 });
 
 test('should an asynchronous program function exit with code of `ProgramError`', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'async-program-error-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 123,
-  "stderr": "hello, program error!
-",
-  "stdout": "",
-}
-`);
+    {
+      "code": 123,
+      "stderr": "hello, program error!
+    ",
+      "stdout": "",
+    }
+  `);
 });
 
 test('should a synchronous program function exit with code `1` by thrown error', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'sync-error-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 1,
-  "stderr": "Error: hello, error!
-",
-  "stdout": "",
-}
-`);
+    {
+      "code": 1,
+      "stderr": "Error: hello, error!
+    ",
+      "stdout": "",
+    }
+  `);
 });
 
 test('should an asynchronous program function exit with code `1` by thrown error', () => {
-  let result = ChildProcess.spawnSync(
+  const result = ChildProcess.spawnSync(
     process.argv0,
     [Path.join(TEST_CASES_DIR_NAME, 'async-error-1')],
     {},
   );
 
   expect(extractSpawnResult(result)).toMatchInlineSnapshot(`
-Object {
-  "code": 1,
-  "stderr": "Error: hello, error!
-",
-  "stdout": "",
-}
-`);
+    {
+      "code": 1,
+      "stderr": "Error: hello, error!
+    ",
+      "stdout": "",
+    }
+  `);
 });
 
 interface SpawnResult {
