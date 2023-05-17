@@ -6,7 +6,8 @@
     "author": "vilicvane",
     "projects": [
       {
-        "name": "library"
+        "name": "library",
+        "module": ["cjs", "esm"]
       },
       {
         "name": "test-cases",
