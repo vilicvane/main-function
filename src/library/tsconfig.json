@@ -4,6 +4,6 @@
     "composite": true,
     "types": ["node"],
     "rootDir": ".",
-    "outDir": "../../bld/library/cjs"
+    "outDir": "../../bld/library"
   }
 }
