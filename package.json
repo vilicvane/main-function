@@ -4,10 +4,9 @@
   "license": "MIT",
   "author": "vilicvane",
   "exports": {
-    "types": "./bld/library/cjs/index.d.ts",
-    "import": "./bld/library/esm/index.js",
-    "require": "./bld/library/cjs/index.js",
-    "default": "./bld/library/esm/index.js"
+    "types": "./bld/library/index.d.ts",
+    "require": "./bld/library/index.js",
+    "default": "./bld/library/index.js"
   },
   "scripts": {
     "3": "yarn && yarn-deduplicate && yarn",
