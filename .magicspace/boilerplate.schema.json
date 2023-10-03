@@ -111,10 +111,7 @@
     },
     "type-9": {
       "type": "object",
-      "required": [
-        "subpath",
-        "module"
-      ],
+      "required": ["subpath", "module"],
       "properties": {
         "subpath": {
           "type": "string",
@@ -232,10 +229,7 @@
     },
     "type-21": {
       "type": "object",
-      "required": [
-        "package",
-        "project"
-      ],
+      "required": ["package", "project"],
       "properties": {
         "package": {
           "type": "string"
@@ -325,9 +319,7 @@
     },
     "type-27": {
       "type": "object",
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "properties": {
         "name": {
           "type": "string"
@@ -452,9 +444,7 @@
     },
     "type-34": {
       "type": "object",
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "properties": {
         "name": {
           "type": "string"
@@ -495,11 +485,7 @@
     },
     "type-35": {
       "type": "object",
-      "required": [
-        "$schema",
-        "boilerplate",
-        "options"
-      ],
+      "required": ["$schema", "boilerplate", "options"],
       "properties": {
         "$schema": {
           "type": "string"
